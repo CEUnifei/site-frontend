@@ -1,9 +1,10 @@
 import React from 'react';
-import { Container, Typography, Button, Paper, Box } from '@mui/material';
+import { Container, Typography, Button, Paper, Box, ThemeProvider } from '@mui/material';
+import theme from './styles/global';
 
 function App() {
   return (
-    <Container component="main" maxWidth="xs">
+    <ThemeProvider theme={theme}>
       <Paper elevation={3} sx={{ padding: 3 }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <Typography variant="h5">Welcome to My MUI App</Typography>
@@ -15,7 +16,7 @@ function App() {
           </Button>
         </Box>
       </Paper>
-    </Container>
+    </ThemeProvider>
   );
 }
 
