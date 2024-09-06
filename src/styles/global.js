@@ -17,7 +17,7 @@ const theme = createTheme({
         },
     },
     typography: {
-        fontFamily: 'GlacialIndifference, Roboto'
+        fontFamily: 'Teachers, Roboto'
     }
 })
 
