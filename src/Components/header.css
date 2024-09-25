@@ -1,0 +1,77 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 210px;
+    z-index: 999;
+}
+
+.header-social {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #d0d0d0;
+    width: 100vw;
+    z-index: 2;
+}
+
+
+.icon {
+    width: 27px;
+    height: 28px;
+    cursor: pointer;
+}
+
+
+
+.logo img {
+    width: 290px;
+    height: 155px;
+    margin-right: 240px;
+}
+
+.login {
+    position: relative;
+    z-index: 10;
+}
+
+.vortexHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.vortexHeaderRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    pointer-events: none;
+    height: 70%;
+}
+
+ .vortexHeader {
+    height: 100%;
+}
+
+.headerMenu {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    border-bottom: #d0d0d0 1px solid;
+}
+
+.headerMenu a:hover, .redes-sociais a:hover {
+    color: #8733d3;
+}
+
+.redes-sociais a {
+    color: black;
+}
+

@@ -3,7 +3,7 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
     palette: {
         primary: {
-            main: '#6a00c8',
+            main: '#6204BF',
             light: '#8733d3',
             dark: '#4a008c'
         },
@@ -17,7 +17,7 @@ const theme = createTheme({
         },
     },
     typography: {
-        fontFamily: 'Teachers, Roboto'
+        fontFamily: 'Teachers, Roboto, League Spartan, Saira, Kdam Thmor Pro'
     }
 })
 
