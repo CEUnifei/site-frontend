@@ -1,12 +1,13 @@
-import { Box } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import "./home.css"
+import News from "./Sections/News";
+import CoworkingSection from "./Sections/CoworkingSection";
 
 export default function Home() {
     return (
         <Box>
-            <Box className="home-noticias" >
-               
-            </Box>
+            <News />
+            <CoworkingSection />
         </Box>
     )
 }

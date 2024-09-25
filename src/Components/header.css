@@ -67,7 +67,7 @@
     border-bottom: #d0d0d0 1px solid;
 }
 
-.headerMenu, .redes-sociais a:hover {
+.headerMenu a:hover, .redes-sociais a:hover {
     color: #8733d3;
 }
 
