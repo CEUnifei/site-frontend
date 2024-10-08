@@ -1,8 +1,9 @@
-import { Container, Typography } from "@mui/material"
+import { Container, Typography, Box } from "@mui/material"
 import backgroundImage from '../../../styles/images/CEU2024.jpg';
 
 export default function News() {
     return (
+        <>
         <Container className="home-noticias" maxWidth="xll"
         sx={{
             width: '100%',
@@ -16,24 +17,25 @@ export default function News() {
             alignItems: 'center'
         }}
         >
-               <Typography fontFamily="League Spartan" color="secondary.light" className="title" variant="h1"
-                sx={{
-                    display: "inline-block",
-                    fontSize: "3.5rem",
-                    margin: '230px 690px 0 0',
-                    width: '600px',
-                    height: '200px',
-                    fontWeight: 'bold',
-                    WebkitTextStroke: '1.5px black',
-                    lineHeight: '50px'
-                }}
-               
-               >CENTRO DE EMPREENDEDORISMO UNIFEI</Typography>
+               <Box width="60vw" height="200px" margin='190px 30vw 0 0'>
+                   <Typography fontFamily="League Spartan" color="secondary.light" className="title" variant="h1"
+                    sx={{
+                        display: "block",
+                        fontSize: "5rem",
+                        width: '100%',
+                        height: '100%',
+                        fontWeight: 'bold',
+                        WebkitTextStroke: '1.5px black',
+                        lineHeight: '50px'
+                    }}
+                   
+                   >CENTRO DE EMPREENDEDORISMO UNIFEI</Typography>
+               </Box>
                <Typography fontFamily="League Spartan" color="secondary.light" className="slogan" variant="h2"
                 sx={{
-                    fontSize: '2.8rem',
+                    fontSize: '3.5rem',
                     WebkitTextStroke: '1.5px #6204BF',
-                    margin: '30px 0px 0px 480px',
+                    margin: '30px 0px 0px 40vw',
                     fontWeight: 'bold',
                     width: '750px',
                     height: '200px',
@@ -41,5 +43,15 @@ export default function News() {
                 }}
                >O MAIOR ECOSSISTEMA DE EMPREENDEDORISMO DO BRASIL💜</Typography>
         </Container>
+        <Box className="text-wrapper">
+            <Typography fontFamily="League Spartan">&nbsp;INOVAÇÃO • CENTRO DE EMPREENDEDORISMO • CRIATIVIDADE • STARTUPS&nbsp; •</Typography>
+            <Typography fontFamily="League Spartan">&nbsp;INOVAÇÃO • CENTRO DE EMPREENDEDORISMO • CRIATIVIDADE • STARTUPS&nbsp; •</Typography>
+            <Typography fontFamily="League Spartan">&nbsp;INOVAÇÃO • CENTRO DE EMPREENDEDORISMO • CRIATIVIDADE • STARTUPS&nbsp; •</Typography>
+            <Typography fontFamily="League Spartan">&nbsp;INOVAÇÃO • CENTRO DE EMPREENDEDORISMO • CRIATIVIDADE • STARTUPS&nbsp; •</Typography>
+            <Typography fontFamily="League Spartan">&nbsp;INOVAÇÃO • CENTRO DE EMPREENDEDORISMO • CRIATIVIDADE • STARTUPS&nbsp; •</Typography>
+            <Typography fontFamily="League Spartan">&nbsp;INOVAÇÃO • CENTRO DE EMPREENDEDORISMO • CRIATIVIDADE • STARTUPS&nbsp; •</Typography>
+        </Box>
+        </>
+        
     )
 }
