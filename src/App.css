@@ -2,16 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html, body, #root {
   height: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   width: 100vw;
   overflow-x: hidden;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 a{
   text-decoration: none;
+}
+
+
+
+@media (max-width: 906px) {
+  html {
+    font-size: 50%;
+  }
 }
