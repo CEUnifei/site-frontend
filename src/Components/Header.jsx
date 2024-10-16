@@ -1,4 +1,4 @@
-import { Button, Box, Link } from "@mui/material";
+import { Box, Link } from "@mui/material";
 import { FaSquareInstagram, FaLinkedin, FaFacebook } from "react-icons/fa6";
 import logo from "../styles/images/Logo CEU horizontal preto.png";
 import vortex from "../styles/images/vortex 1.svg"
@@ -20,15 +20,18 @@ export default function Header() {
                     <Link href=""><FaFacebook className="icon" /></Link>
                 </Box>
                 <Box className="logo">
-                    <img src={logo} alt="CEU logo" />
+                    <Link href="/"><img src={logo} alt="CEU logo" /></Link>
                 </Box>
                 
                 <Box><img src={vortexRight} alt="" className="vortexHeaderRight"/></Box>
             </Box>
             <Box className="headerMenu"  fontFamily="League Spartan">
-                <Link color="primary" sx={{textDecoration: "none", cursor: "pointer"}} fontFamily="Roboto">Quem Somos</Link>
-                <Link color="primary" sx={{textDecoration: "none", cursor: "pointer"}} fontFamily="Roboto">Reservas</Link>
-                <Link color="primary" sx={{textDecoration: "none", cursor: "pointer"}} fontFamily="Roboto">Regras e Códigos</Link>
+                <Link color="primary" sx={{textDecoration: "none", cursor: "pointer"}} fontFamily="Roboto" >
+                Quem Somos</Link>
+                <Link color="primary" sx={{textDecoration: "none", cursor: "pointer"}} fontFamily="Roboto" href="/coworking">
+                Reservas</Link>
+                <Link color="primary" sx={{textDecoration: "none", cursor: "pointer"}} fontFamily="Roboto">
+                Regras e Códigos</Link>
             </Box>
         </Box>
     );

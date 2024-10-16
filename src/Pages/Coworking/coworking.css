@@ -1,0 +1,93 @@
+.coworking {
+    position: relative;
+    height: 1200px;
+}
+
+.salas {
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+}
+.salas p {
+    text-align: center;
+    color: #FFF;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.salas #sala2 {
+    margin-top: 50px;
+}
+
+.salaImg {
+    width: 320px;
+    height: 190px;
+    border-radius: 5px;
+}
+
+.reserva {
+    z-index: 2;
+    width: 650px;
+    height: 700px;
+    position: relative;
+}
+
+.reserva h2 {
+    text-align: center;
+    margin: 70px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.form-reserva {
+    z-index: 3;
+    position: relative;
+    margin-top: 50px;
+    width: 550px;
+    height: 700px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.637);
+    background: white; /* Adiciona fundo branco para maior destaque */
+    padding: 20px;
+}
+
+.form-reserva form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.brush {
+    position: absolute;
+    z-index: 1; 
+    width: 1000px;
+    height: 900px;
+}
+
+.brush2 {
+    top: 25%;
+    left: 0;
+}
+
+.brush1 {
+    right: 1%;
+    bottom: -200px;
+}
+
+/* Estilos para o componente de datas */
+
+.MuiPickersDay-root {
+    font-size: 1.4rem!important; /* Aumentando a fonte das datas */
+  }
+
+.MuiInputBase-input {
+    font-size: 1.5rem!important; /* Aumentando a fonte das datas */
+    padding: 10px!important;
+    text-align: center;
+}
+.MuiFormLabel-root {
+    left: -6px!important;
+    font-size: 1.3rem!important;
+    font-weight: 700!important;
+}
+
