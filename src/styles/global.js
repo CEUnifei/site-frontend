@@ -9,7 +9,7 @@ const theme = createTheme({
         },
         secondary: {
             dark: '#000000',
-            main: '#000000',
+            main: '#1E1E1E',
             light: '#ffffff',
         },
         coworking: {

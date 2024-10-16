@@ -1,0 +1,29 @@
+.inputForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.inputForm label {
+    font-size: 1.1rem;
+    font-family: "Roboto";
+    text-transform: capitalize;
+    margin: 2px 5px;
+}
+
+.inputForm input {
+    width: 350px;
+    padding: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 1.4rem;
+    font-family: "Roboto";
+}
+
+.inputForm input:focus {
+    transition: .2s;
+    border-bottom: 1px solid #8733d3;
+}

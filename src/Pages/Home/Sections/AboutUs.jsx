@@ -11,9 +11,7 @@ export default function AboutUs() {
             }}>
             <Box margin="100px auto">
                 <Typography variant="h2" fontFamily="League Spartan" sx={{fontWeight: 600, color: 'secondary.light'}}>SOBRE NÓS</Typography>
-                <Grid2 container>
-
-                </Grid2>
+                
             </Box>
         </Box>
     )
