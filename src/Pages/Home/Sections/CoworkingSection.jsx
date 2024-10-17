@@ -1,6 +1,6 @@
 import { Container, Stack, Typography, Box, Button } from "@mui/material";
 import chair from '../../../styles/images/chair.png';
-
+import "./coworkingSec.css"
 export default function CoworkingSection() {
 
     return (
@@ -20,14 +20,15 @@ export default function CoworkingSection() {
                     
                     <Box width='100%' marginTop='50px' className="coworking-text">
                         <Typography fontSize='2.4rem' width='600px'>Nosso coworking une espaços livres e reserváveis com um clima agradável e café comunitário ☕</Typography>
-                        <Button variant="contained"  sx={{margin: '50px', width: '60%', padding: '10px', fontSize: "1.3rem"}}>Saiba mais</Button>
+                        <Button variant="contained"  sx={{margin: '50px', width: '100%', maxWidth: '60%', padding: '10px', fontSize: "1.3rem"}}>Saiba mais</Button>
                     </Box>
                 </Container>
                 
                 
             </Stack>
             <div className="coworking-img">
-                <Button color="primary" variant="contained" sx={{marginTop:'500px',  fontSize: "1.3rem"}}>Reserve Já</Button>
+                <Button href="/coworking"
+                color="primary" variant="contained" sx={{marginTop:'500px',  fontSize: "1.3rem"}}>Reserve Já</Button>
             </div>
             <img src={chair} alt="Chair" className="chair"  />
         </Box>

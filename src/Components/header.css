@@ -22,8 +22,8 @@
 
 
 .icon {
-    width: 27px;
-    height: 28px;
+    width: 1.5vw;
+    height: 2.5vw;
     cursor: pointer;
 }
 
@@ -86,6 +86,12 @@
 }
 
 
+@media (width > 1366px) {
+    .redes-sociais {
+        margin-left: 100px;
+    }
+}
+
 @media (max-width: 1366px) {
     .logo img{
         width: 190px;
@@ -105,8 +111,7 @@
         margin-left: 15vw;
     }
     .redes-sociais .icon {
-        width: 4vw;
-        height: auto;
+        display: none;
     }
     .logo img {
         align-self: center;
@@ -129,5 +134,9 @@
 @media (max-width: 430px) {
     .header {
         height: 20vw;
+    }
+
+    .header .redes-sociais .icon {
+        display: none;
     }
 }

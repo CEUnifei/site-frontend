@@ -1,0 +1,23 @@
+
+
+@media (max-width: 952px) {
+
+    .home-noticias .slogan {
+       width: 75vw;
+       font-size: 3.3rem;
+       display: inline-block;
+       margin-top: 200px;
+       margin-right: 150px;
+       
+    }
+ }
+
+ @media (max-width: 500px) {
+    html {
+        font-size: 38%;
+    }
+
+    .home-noticias .title {
+        margin-left: 10%;
+    }
+ }

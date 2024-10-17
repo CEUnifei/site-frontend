@@ -1,0 +1,157 @@
+.home-coworking h2{
+    margin-top: 100px;
+    font-size: 3.5rem;
+    width: 750px;
+    font-weight: 500;
+ }
+
+.home-coworking button {
+    background-color: #1E1E1E;
+}
+
+.coworking-section {
+    height: 1200px;
+    width: 100vw;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    border-bottom: 2px solid black;
+ }
+ 
+ .coworking-section .coworking-img {
+    box-sizing: border-box;
+    width: 900px;
+    max-height: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 12;
+    background-image: url('../../../styles/images/coworkingSW.jpg');
+    background-size: cover;
+    background-position: center;
+ }
+ .chair {
+    width: auto;
+    height: 600px;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+ }
+ 
+
+ 
+ @media (max-width: 1360px) {
+    .chair {
+       width: auto; 
+       height: 300px;
+       margin-left: 155px; 
+       z-index: -1;
+    }
+ 
+    .coworking-img {
+       height: 600px;
+       width: auto;
+       margin-right: 30px;
+       margin-top: 145px;
+       border-radius: 10px;
+       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.637);
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+    
+    .coworking-section {
+       height: 1000px;
+    }
+    
+    .home-coworking button {
+       margin: 100px;
+    }
+ }
+ 
+ 
+ @media (max-width: 1200px) {
+    .coworking-section {
+       flex-direction: column;
+    }
+ 
+    .coworking-img {
+       position: absolute;
+       margin: 0 auto;
+       border-radius: 0;
+       width: 100vw!important;
+       height: 450px;
+       bottom: 0;
+       
+    }
+ 
+    .coworking-img a {
+       align-self: center;
+       margin: 0 auto;
+    }
+ 
+    .chair {
+       width: 30vw;
+       height: auto;
+       top: 0;
+       margin-left: 700px;
+       margin-top: 200px;
+    }
+    
+ }
+ 
+ @media (max-width: 952px) {
+    .chair {
+       display: none;
+    }
+    .home-coworking div {
+       display: flex;
+       flex-direction: column;
+       width: 100vw;
+       justify-content: center;
+       align-items: center;
+    }
+    .home-coworking div button {
+       width: 400px;
+       margin-left: 0;
+       
+    }
+    .home-coworking h2 {
+       width: 700px;
+       margin-left: 0
+    }
+ }
+ 
+ @media (max-width: 650px) {
+    .home-coworking h2 {
+       font-size: 2.4rem;
+       width: 500px;
+    }
+    .home-coworking {
+       margin-left: 0!important;
+    }
+    .home-coworking p {
+       width: 350px;
+       text-align: left;
+       align-self: flex-start;
+    }
+    .coworking-text {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+    .home-coworking button {
+       margin-right: 0;
+    }
+    .coworking-img button{
+       display: none;
+    }
+ }
+ 
+ @media (max-width: 420px) {
+    .home-coworking h2 {
+       font-size: 2.2rem;
+       width: 350px;
+    }
+ }
