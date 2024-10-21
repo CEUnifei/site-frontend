@@ -17,7 +17,7 @@ const theme = createTheme({
         },
     },
     typography: {
-        fontFamily: 'Teachers, Roboto, League Spartan, Saira, Kdam Thmor Pro'
+        fontFamily: 'Teachers, Roboto, League Spartan, Saira, Kdam Thmor, Pro Roboto Mono '
     }
 })
 

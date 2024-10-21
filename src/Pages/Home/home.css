@@ -17,7 +17,7 @@
    display: inline;
    color: #FFF;
 
-   animation: animafaixa 4s linear infinite;
+   animation: animafaixa 5s linear infinite;
 }
 
 @keyframes animafaixa {
