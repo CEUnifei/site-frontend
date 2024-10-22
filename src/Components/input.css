@@ -27,3 +27,9 @@
     transition: .2s;
     border-bottom: 1px solid #8733d3;
 }
+
+@media (max-width: 380px) {
+    .inputForm input {
+        width: 300px;
+    }
+}

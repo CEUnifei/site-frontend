@@ -4,7 +4,7 @@ export default function InputForm({label, placeholder, htmlfor, type}) {
     return (
         <div className="inputForm">
             <label htmlFor={htmlfor}>{label}</label>
-            <input type={type} placeholder={placeholder}/>
+            <input type={type} placeholder={placeholder} required/>
         </div>
     )
 }
