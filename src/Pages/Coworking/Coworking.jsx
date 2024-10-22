@@ -21,7 +21,7 @@ import "./coworking.css"
 import 'dayjs/locale/pt-br'; // Importando a localidade brasileira
 import utc from 'dayjs/plugin/utc';
 
-import { Toaster, toast } from 'sonner'
+import { toast } from 'sonner'
 
 // Defina a localidade do dayjs para 'pt-br'
 dayjs.locale('pt-br');
@@ -97,17 +97,38 @@ export default function Coworking() {
         e.preventDefault()
             // Verifica se a data e hora estão selecionadas
         if (!value || !startDate) {
-            console.log("Selecione a data e hora de entrada!");
-            return;
+            return toast.error("Selecione a data e hora de entrada!", {
+                timeout: 1000,
+                className: 'myToast'
+                },);
+            
         }
         if(endDate <= startDate) {
-            console.log("Selecione um período válido");
-            return
+            return toast.error("Selecione um período válido", {
+                timeout: 1000,
+                className: 'myToast'
+                },);
+            
         }
 
         // Divide a string da hora de entrada (ex: "11:30") em horas e minutos
         const [hoursIn, minutesIn] = startDate.split(':').map(Number);
         const [hoursOut, minutesOut] = endDate.split(':').map(Number);
+
+        const totalMinutesIn = hoursIn * 60 + minutesIn;
+        const totalMinutesOut = hoursOut * 60 + minutesOut;
+    
+        // Calcula a diferença em minutos entre os horários de entrada e saída
+        const diffMinutes = totalMinutesOut - totalMinutesIn;
+    
+        // Verifica se a diferença é maior que 180 minutos (3 horas)
+        if (diffMinutes > 180) {
+            return toast.error("A reserva máxima é de 3 horas", {
+                timeout: 1000,
+                className: 'myToast'
+            });
+        }
+    
 
         // Usar dayjs para adicionar horas e minutos à data selecionada
         const selectedStartTime = dayjs(value)
@@ -134,13 +155,16 @@ export default function Coworking() {
         console.log("Hora de Entrada:", startDate);
         console.log("Hora de Saída:", endDate);
 
-       
+        toast.success('Reserva realizada com sucesso!', {
+            timeout: 1000,
+            className: 'myToast'
+            },)
         
     }
 
     return (
         <Box className="coworking">
-            <Stack bgcolor={"secondary.main"} height={350} flexDirection="row" className="salas">
+            <Box bgcolor={"secondary.main"} minHeight={350} flexDirection={'row'} className="salas">
                 <Box>
                     <img src={salaGrande} alt="" className="salaImg" />
                     <Typography>GRANDE</Typography>
@@ -153,7 +177,7 @@ export default function Coworking() {
                     <img src={salaPequena} alt="" className="salaImg" />
                     <Typography>PEQUENA</Typography>
                 </Box>
-            </Stack>
+            </Box>
 
             <img src={brush1} alt="" className="brush brush1" />
             <img src={brush2} alt="" className="brush brush2" />
@@ -168,7 +192,22 @@ export default function Coworking() {
                         <InputForm type="email" label="email" htmlfor="email" 
                         placeholder="example@email.com"/>
                         <InputForm type="text" label="empresa" htmlfor="empresa" placeholder="example" />
-                        <Box my={5}>
+                        <FormControl  sx={{margin: 3.5}}>
+                        <FormLabel id="demo-radio-buttons-group-label"></FormLabel>
+                            <RadioGroup
+                                row
+                                aria-labelledby="demo-radio-buttons-group-label"
+                                defaultValue="2"
+                                name="row-radio-buttons-group"
+                                
+                                
+                            >
+                                <FormControlLabel value="1" control={<Radio />} label="Sala Grande" />
+                                <FormControlLabel value="2" control={<Radio />} label="Sala Média" />
+                                <FormControlLabel value="3" control={<Radio />} label="Sala Pequena" />
+                            </RadioGroup>
+                        </FormControl>
+                        <Box my={2}>
                             <LocalizationProvider dateAdapter={AdapterDayjs}>
                                 <DemoContainer components={['DatePicker']}>
                                     <DatePicker
@@ -182,7 +221,7 @@ export default function Coworking() {
                                 </DemoContainer>
                             </LocalizationProvider>
                         </Box>
-                        <Stack flexDirection={"row"} gap={5}>
+                        <Stack flexDirection={"row"} gap={5} className="select-hour">
                             <FormControl sx={{ m: 1, width: 160 }}>
                                 <InputLabel>Entrada</InputLabel>
                                 <Select label="Entrada" value={startDate} onChange={(e) => setStartDate(e.target.value)}>
@@ -198,22 +237,12 @@ export default function Coworking() {
                                 </Select>
                             </FormControl>
                         </Stack>
-                        <FormControl  sx={{margin: 5}}>
-                        <FormLabel id="demo-radio-buttons-group-label"></FormLabel>
-                            <RadioGroup
-                                row
-                                aria-labelledby="demo-radio-buttons-group-label"
-                                defaultValue="2"
-                                name="row-radio-buttons-group"
-                                
-                                
-                            >
-                                <FormControlLabel value="1" control={<Radio />} label="Sala Grande" />
-                                <FormControlLabel value="2" control={<Radio />} label="Sala Média" />
-                                <FormControlLabel value="3" control={<Radio />} label="Sala Pequena" />
-                            </RadioGroup>
-                        </FormControl>
-                            <Button type="submit" sx={{bgcolor: "#ffde59", color: "#000", padding: '2px 30px', fontSize: "1.4rem"}}>
+                        
+                            <Button type="submit"  sx={{
+                                bgcolor: "#ffde59", color: "#000", 
+                                padding: '2px 50px', fontSize: "1.4rem",
+                                marginTop: '40px'
+                                }}>
                                 Reservar</Button>
                         
                     </form>
