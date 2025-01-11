@@ -1,5 +1,5 @@
 import { Container, Stack, Typography, Box, Button } from "@mui/material";
-import chair from '../../../styles/images/chair.png';
+
 import "./coworkingSec.css"
 export default function CoworkingSection() {
 
@@ -30,7 +30,6 @@ export default function CoworkingSection() {
                 <Button href="/coworking"
                 color="primary" variant="contained" sx={{marginTop:'500px',  fontSize: "1.3rem"}}>Reserve Já</Button>
             </div>
-            <img src={chair} alt="Chair" className="chair"  />
         </Box>
     )
 }
