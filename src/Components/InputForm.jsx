@@ -1,10 +1,10 @@
-import "./input.css"
+import "./input.css";
 
-export default function InputForm({label, placeholder, htmlfor, type}) {
+export default function InputForm({ label, placeholder, type, name, register }) {
     return (
         <div className="inputForm">
-            <label htmlFor={htmlfor}>{label}</label>
-            <input type={type} placeholder={placeholder} required/>
+            <label>{label}</label>
+            <input type={type} placeholder={placeholder} name={name} {...register(name)} />
         </div>
-    )
+    );
 }

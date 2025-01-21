@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Coworking from './Pages/Coworking/Coworking';
+import Register from './Pages/Register/Register';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/coworking",
         element: <Coworking />
+      },
+      {
+        path: "/register",
+        element: <Register />
       }
     ]
   }
