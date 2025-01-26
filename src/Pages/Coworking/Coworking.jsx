@@ -15,14 +15,12 @@ import icon from "../../styles/images/logo final cw.png"
 import brush1 from "../../styles/images/brush1.png"
 import brush2 from "../../styles/images/brush2.png"
 
-import InputForm from "../../Components/InputForm";
 import "./coworking.css"
 
 import 'dayjs/locale/pt-br'; // Importando a localidade brasileira
 import utc from 'dayjs/plugin/utc';
 
 import { toast } from 'sonner'
-
 // Defina a localidade do dayjs para 'pt-br'
 dayjs.locale('pt-br');
 dayjs.extend(utc);
@@ -189,9 +187,6 @@ export default function Coworking() {
                 <Box margin="auto" className="form-reserva">
                     <img src={icon} alt="" width={100} height={100} />
                     <form onSubmit={handleSubmit}>
-                        <InputForm type="email" label="email" htmlfor="email" 
-                        placeholder="example@email.com"/>
-                        <InputForm type="text" label="empresa" htmlfor="empresa" placeholder="example" />
                         <FormControl  sx={{margin: 3.5}}>
                         <FormLabel id="demo-radio-buttons-group-label"></FormLabel>
                             <RadioGroup
@@ -199,8 +194,6 @@ export default function Coworking() {
                                 aria-labelledby="demo-radio-buttons-group-label"
                                 defaultValue="2"
                                 name="row-radio-buttons-group"
-                                
-                                
                             >
                                 <FormControlLabel value="1" control={<Radio />} label="Sala Grande" />
                                 <FormControlLabel value="2" control={<Radio />} label="Sala Média" />
